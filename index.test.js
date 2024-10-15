@@ -27,6 +27,22 @@ describe('./musicians endpoint', () => {
         })
       });
     
+      describe('./musicians/id endpoint', () => {
+        // Write your tests here
+        test("It should respond with a status code of 200", async () => {
+            const response = await request(app).get("/musicians/:id");
+            expect(response.statusCode).toBe(200);
+          });
+        
+          
+        
+          test("It should return a list of musicians", async () => {
+            const response = await request(app).get("/musicians/:id");
+            const responseData = JSON.parse(response.text);
+            
+            
+            })
+          });
     
 
 
